@@ -40,6 +40,14 @@
 
 #define STOP_DIMENSION 3 /* default: stop on dimension 4 */
 
+// Implementation of the dummy function for testing
+#include <stdio.h>
+int hv_dummy_function(void) {
+printf("dummy\n");
+return 0;
+}
+
+
 typedef struct fpli_dlnode {
     const double *x;              /* The data vector              */
     struct fpli_dlnode **next;         /* Next-node vector             */
