@@ -495,7 +495,7 @@ double fpli_hv(double *data, int d, int n, const double *ref)
     dlnode_t *list;
     double hyperv;
     double * bound = NULL;
-
+    printf("Using local hypervolume\n");
 #if VARIANT >= 3
     int i;
 

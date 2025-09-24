@@ -65,7 +65,6 @@
 #include "MultilevelGridArchive.h"
 #include "AdaptiveGridArchive.h"
 #include "HVArchive.h"
-extern "C" void hv_dummy_function(void); 
 
 enum archive_types { UNBOUND_ARCHIVE = 0, DOMINATING_ARCHIVE, ePARETO_ARCHIVE, eAPPROX_ARCHIVE, SPEA2_ARCHIVE, NSGA2_ARCHIVE, AGA_ARCHIVE, HV_ARCHIVE, MGA_ARCHIVE, UNDEFINED_ARCHIVE };
 static const char * const archive_names[] =
@@ -228,8 +227,6 @@ int main(int argc, char *argv[])
     usage();
     exit(1);
   }
-  
-  hv_dummy_function();
 
   seed =  time(NULL);
   // printf("argc = %d\n", argc);

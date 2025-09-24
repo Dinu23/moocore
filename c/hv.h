@@ -29,7 +29,6 @@ MOOCORE_API double fpli_hv(const double *data, int d, int n, const double *ref);
 MOOCORE_API double hv_contributions(double *hvc, double *points, int dim, int size, const double * ref);
 
 // Dummy function for testing
-MOOCORE_API int hv_dummy_function(void);
 
 END_C_DECLS
 
