@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "ctime": "cpp"
+        "ctime": "cpp",
+        "cassert": "cpp",
+        "vector": "cpp",
+        "new": "cpp"
     }
 }
