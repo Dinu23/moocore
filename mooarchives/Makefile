@@ -304,13 +304,13 @@ build-libmoocore:
 	fi
 	@if [ ! -f "$(LIBMOOCORE_LIB)" ]; then \
 		echo "Building libmoocore shared library (without sanitizers)..."; \
-		cd $(LIBMOOCORE_DIR) && $(MAKE) clean; \
-		cd $(LIBMOOCORE_DIR) && $(MAKE) shlibs CC=$(CC) CXX=$(CXX) \
+		$(MAKE) -C $(LIBMOOCORE_DIR) clean; \
+		$(MAKE) -C $(LIBMOOCORE_DIR) shlibs CC=$(CC) CXX=$(CXX) \
 			DEBUG=0 SANITIZERS="" OPT_CFLAGS="-O2 -DNDEBUG" \
 			CFLAGS="-fPIC" CXXFLAGS="-fPIC"; \
 		if [ ! -f "$(LIBMOOCORE_LIB)" ]; then \
 			echo "shlibs target failed, trying alternative approach..."; \
-			cd $(LIBMOOCORE_DIR) && $(MAKE) $(SHLIB) CC=$(CC) CXX=$(CXX) \
+			$(MAKE) -C $(LIBMOOCORE_DIR) $(SHLIB) CC=$(CC) CXX=$(CXX) \
 				DEBUG=0 SANITIZERS="" OPT_CFLAGS="-O2 -DNDEBUG" \
 				CFLAGS="-fPIC" CXXFLAGS="-fPIC"; \
 		fi; \

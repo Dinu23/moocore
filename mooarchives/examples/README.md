@@ -9,14 +9,14 @@ This repository provides examples for using `mooarchives` with both Python and C
 ### 1. **Build and Install C++ Libraries**
 
 ```bash
-make install-user
+make -C .. install-user
 export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
 ```
 
 ### 2. **Compile the Example**
 
 ```bash
-g++ examples/archiver.cpp -o archiver \
+g++ archiver.cpp -o archiver \
     -Iinclude -L$HOME/.local/lib -lmooarchives -lmoocore
 ```
 
@@ -39,7 +39,7 @@ g++ examples/archiver.cpp -o archiver \
 ### 1. **Install mooarchives (Python)**
 
 ```bash
-pip install --user .
+pip install --user ..
 ```
 
 ### 2. **Prepare an Input File**
@@ -49,7 +49,7 @@ Use the same format as above for `input.txt`.
 ### 3. **Run the Python Script**
 
 ```bash
-python examples/archiver.py -t 0 -N 1 -f sequence.txt
+python archiver.py -t 0 -N 1 -f sequence.txt
 ```
 - The options are the same as for the C++ version.
 
