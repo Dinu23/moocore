@@ -1,0 +1,76 @@
+# Examples: Using mooarchives
+
+This repository provides examples for using `mooarchives` with both Python and C++.
+
+---
+
+## Step-by-Step: Using archiver.cpp (C++)
+
+### 1. **Build and Install C++ Libraries**
+
+```bash
+make install-user
+export LD_LIBRARY_PATH="$HOME/.local/lib:$LD_LIBRARY_PATH"
+```
+
+### 2. **Compile the Example**
+
+```bash
+g++ examples/archiver.cpp -o archiver \
+    -Iinclude -L$HOME/.local/lib -lmooarchives -lmoocore
+```
+
+### 3. **Run the Example**
+
+```bash
+./archiver -t 0 -N 1 -f sequence.txt 
+```
+- `-t` archive type (0=HV, 1=Dominating, 2=Unbounded)
+- `-N` max archive size
+- `-f` input file
+- `-len` max number of solutions to read
+- `-s` random seed
+- `-o` output file prefix (optional)
+
+---
+
+## Step-by-Step: Using archiver.py (Python)
+
+### 1. **Install mooarchives (Python)**
+
+```bash
+pip install --user .
+```
+
+### 2. **Prepare an Input File**
+
+Use the same format as above for `input.txt`.
+
+### 3. **Run the Python Script**
+
+```bash
+python examples/archiver.py -t 0 -N 1 -f sequence.txt
+```
+- The options are the same as for the C++ version.
+
+---
+
+## Output
+
+- If you use the `-o archive_out` option, you will get files like `archive_out.1`, `archive_out.2`, etc., each containing the archive state after each addition.
+- If you do **not** use `-o`, the archive contents will be printed to the terminal.
+
+---
+
+## Summary Table
+
+| Step                | C++ Command                                               | Python Command                                      |
+|---------------------|----------------------------------------------------------|-----------------------------------------------------|
+| Build/install       | `make install-user`<br>`export LD_LIBRARY_PATH=...`      | `pip install --user .`                              |
+| Compile/run         | `g++ ... archiver.cpp ...`<br>`./archiver ...`           | `python examples/archiver.py ...`                   |
+| Input file format   | Space-separated floats per line                          | Same                                                |
+| Output              | Files or terminal output                                 | Files or terminal output                            |
+
+---
+
+You can now use both C++ and Python versions to process solution files and manage archives with the same workflow!
