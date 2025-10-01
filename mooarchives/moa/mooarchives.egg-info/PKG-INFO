@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: mooarchives
+Version: 0.0.1
+Summary: Multi-Objective Archive Library with Python bindings
+Home-page: https://github.com/yourusername/mooarchives
+Author: Your Name
+Author-email: Your Name <your.email@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/mooarchives
+Project-URL: Repository, https://github.com/yourusername/mooarchives.git
+Project-URL: Issues, https://github.com/yourusername/mooarchives/issues
+Keywords: multi-objective,optimization,pareto,archive
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: C++
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.15.0
+Provides-Extra: test
+Requires-Dist: pytest>=6.0; extra == "test"
+Requires-Dist: numpy; extra == "test"
+Provides-Extra: dev
+Requires-Dist: pytest>=6.0; extra == "dev"
+Requires-Dist: numpy; extra == "dev"
+Requires-Dist: build; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Dynamic: author
+Dynamic: home-page
+Dynamic: requires-python

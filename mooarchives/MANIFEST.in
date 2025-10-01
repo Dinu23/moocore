@@ -1,0 +1,20 @@
+# Include C++ source files and headers
+recursive-include src *.c *.cpp *.h *.hpp
+recursive-include include *.h *.hpp
+recursive-include external/libmoocore *.c *.cpp *.h *.hpp *.so
+
+# Include build configuration
+include Makefile
+include pyproject.toml
+include setup.py
+include README.md
+include LICENSE
+
+# Include Python module
+recursive-include python *.py *.cpp
+
+# Exclude build artifacts and examples
+global-exclude *.o
+global-exclude *.a
+prune build/src
+prune examples

@@ -344,6 +344,7 @@ double fpli_hv(const double * restrict data, int d, int npoints,
                const double * restrict ref)
 {
     printf("Moocore implementation of fpli_hv called.\n");
+    fflush(stdout);
     size_t n = (size_t) npoints;
     if (unlikely(n == 0)) return 0.0;
     ASSUME(d < 256);

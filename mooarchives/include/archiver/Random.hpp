@@ -32,6 +32,7 @@
  General Public License at http://www.gnu.org/copyleft/gpl.html
 
 *************************************************************************/
+#pragma once
 #ifndef RANDOM_H
 #define RANDOM_H
 

@@ -1,0 +1,11 @@
+numpy>=1.15.0
+
+[dev]
+pytest>=6.0
+numpy
+build
+twine
+
+[test]
+pytest>=6.0
+numpy
